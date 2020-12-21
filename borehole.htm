@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bore Hole Charge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='style.css'> -->
+    <script src='main.js'></script>
+    <style>
+        
+* {
+  box-sizing: border-box;
+}
+
+h1, p {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0 20% 0 20%;
+    padding: 0 20px 20px 20px;
+}
+
+input[type=text], select, textarea {
+  width: 60%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  display: inline-block;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+button[type=button] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+
+    margin: 0 20% 0 20%;
+    border-style: groove;
+    font-family: 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+label {
+  float: left;
+  width: 40%;
+  margin-top: 6px;
+}
+
+input {
+  float: left;
+  width: 60%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .container{
+        margin: 0%;
+    }
+
+    h1, p {
+    margin: 0;
+    }
+
+
+  label, input[type=text], button[type=button] {
+    width: 100%;
+    margin-top: 0;
+  }
+  .row {
+    width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+        <header>
+            <h1>Bore Hole Charge</h1>
+        </header>
+    <div class="container">
+        <div class="row">
+        <label>Thickness of Pier</label>
+        <input type="text" name="thk" id="thk" placeholder="Enter Thickness of Pier">
+        </div>
+
+        <div class="row">
+        <label>Width of Pier</label>
+        <input type="text" name="width" id="width" placeholder="Enter Width of Pier">
+        </div>
+
+        <div class="row">
+        <label>Flase Width ( if any )</label>
+        <input type="text" name="false" id="flase" placeholder="Enter False Width of Pier">
+        </div>
+
+        <div class="row">
+
+            <button type="button" class="btn btn-info" onclick="borehole()">submit</button>
+
+          </div>
+
+        
+
+        <div class="screen" id="result"></div>
+    </div>  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+        $( document ).ready(function(){
+
+        });
+        function borehole(){
+            var thk = document.getElementById("thk").value;
+            var width = document.getElementById("width").value;
+            var fWidth = document.getElementById("width").value;
+
+            var row;
+            var holes;
+            var depth;
+            var exp;
+            var man;
+            var time;
+
+            holes = (thk-fWidth)/0.9 - 1
+
+            
+
+            
+            document.getElementById("result").innerHTML= "Number of Holes = " + parseInt(holes);
+        }
+    </script>
+    
+</body>
+</html>

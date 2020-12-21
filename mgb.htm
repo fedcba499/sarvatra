@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Medium Girder Bridge</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="containerFluid">
+        <header>
+            <h1>Medium Girder Bridge</h1>
+        </header>
+        <label>AR Span</label>
+        <input type="text" name="thk" id="thk" placeholder="Enter AR Span"> <br><br>
+        
+        <label>F Peg Position</label>
+        <input type="text" name="width" id="width" placeholder="Enter F Peg Position"> <br><br>
+
+        <label>Width of O Peg Position</label>
+        <input type="text" name="false" id="flase" placeholder="Enter O Peg Position"> <br><br>
+
+        <label>Water Level</label>
+        <input type="text" name="false" id="flase" placeholder="Enter Water Level"> <br><br>
+
+        <label>Water Current</label>
+        <input type="text" name="false" id="flase" placeholder="Enter Water Current"> <br><br>
+
+        <label>RRB</label>
+        <input type="text" name="false" id="flase" placeholder="Enter RRB"> <br><br>
+
+        <button type="button" class="btn btn-info" onclick="borehole()">submit</button> <br> <br>
+
+        <div class="screen" id="result"></div>
+    </div>  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+        $( document ).ready(function(){
+
+        });
+        function borehole(){
+            var thk = document.getElementById("thk").value;
+            var width = document.getElementById("width").value;
+            var fWidth = document.getElementById("width").value;
+
+            var row;
+            var holes;
+            var depth;
+            var exp;
+            var man;
+            var time;
+
+            holes = (thk-fWidth)/0.9 - 1
+
+            
+
+            
+            document.getElementById("result").innerHTML= "Number of Holes = " + parseInt(holes);
+        }
+    </script>
+</body>
+</html>

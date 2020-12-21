@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Aslt Br</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <div class="containerFluid">
+        <header>
+            <h1>Aslt Br</h1>
+        </header>
+        <label>Width of Obstacle</label>
+        <input type="text" name="thk" id="thk" placeholder="Enter Width of Obstacle"> <br><br>
+        
+        <label>Time Limitation</label>
+        <input type="text" name="width" id="width" placeholder="Enter Time Limitation"> <br><br>
+
+        <label>Depth of Obstacle</label>
+        <input type="text" name="false" id="flase" placeholder="Enter Depth of Obstacle"> <br><br>
+
+        <button type="button" class="btn btn-info" onclick="borehole()">submit</button> <br> <br>
+
+        <div class="screen" id="result"></div>
+    </div>  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+        $( document ).ready(function(){
+
+        });
+        function borehole(){
+            var thk = document.getElementById("thk").value;
+            var width = document.getElementById("width").value;
+            var fWidth = document.getElementById("width").value;
+
+            var row;
+            var holes;
+            var depth;
+            var exp;
+            var man;
+            var time;
+
+            holes = (thk-fWidth)/0.9 - 1
+
+            
+
+            
+            document.getElementById("result").innerHTML= "Number of Holes = " + parseInt(holes);
+        }
+    </script>
+    
+</body>
+</html>
